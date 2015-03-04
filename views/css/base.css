@@ -12,7 +12,7 @@ body {
   padding: 10px 20px;
 }
 #header h1#sitename {
-  margin: 0;
+  margin: 30px 0 30px 0;
 }
 
 #content {
@@ -23,6 +23,11 @@ body {
 .news {
   margin-bottom: 15px;
 }
+
+.news .tag {
+  text-transform: uppercase;
+}
+
 .news .title {
   border-bottom: 1px solid #555;
   color: #555;
@@ -41,4 +46,13 @@ body {
   background-color: #7b0603;
   color: white;
   padding: 10px 20px;
+}
+
+#header #navigation a {
+    color: black;
+    background: white;
+}
+#header #navigation a:hover {
+    color: black;
+    background: #dddddd;
 }

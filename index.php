@@ -18,13 +18,13 @@ switch ($page) {
     include('controllers/frontPage.php');
     include('views/frontPage.php');
     break;
-  case 'bemutatkozas':
-    include('controllers/introductionPage.php');
-    include('views/introductionPage.php');
-    break;
-  case 'kepgaleria':
-    $pageTitle = "Képgaléria";
-    include('views/imageGalleryPage.php');
+  //case 'bemutatkozas':
+    //include('controllers/introductionPage.php');
+    //include('views/introductionPage.php');
+    //break;
+  case 'termekek':
+    $pageTitle = "termekek";
+    include('views/termekPage.php');
     break;    
   case 'kapcsolat':
     include('controllers/contactPage.php');

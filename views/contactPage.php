@@ -21,9 +21,6 @@
     <br>
     <input type="submit" name="contactSubmit">
   </form>
-    
-  <p>Google map
-
 </div>
 
 <?php
