@@ -25,7 +25,7 @@ switch ($page) {
   case 'termekek':
     $pageTitle = "termekek";
     include('views/termekPage.php');
-    break;    
+    break;
   case 'kapcsolat':
     include('controllers/contactPage.php');
     include('views/contactPage.php');

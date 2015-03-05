@@ -30,12 +30,27 @@
         $c++;
     }
 
-    $termekek = $db->query("select termekek.*,kategoriak.description as kategoria from termekek join kategoriak on termekek.kategoria_id = kategoriak.id");
+    // van-e kategória?
+    if (isset($_GET['kat'])) {
+        $termekek = $db->query("select termekek.*,kategoriak.description as kategoria from termekek "
+                . " join kategoriak on termekek.kategoria_id = kategoriak.id "
+                . " WHERE kategoria_id=".$_GET['kat']);        
+    } else {
+        $termekek = $db->query("select termekek.*,kategoriak.description as kategoria from termekek join kategoriak on termekek.kategoria_id = kategoriak.id");
+    }
+    
     if ($termekek->num_rows > 0) {
-        echo "<table><tr><th>Megnevezés</th><th>Kategória</th><th>Ár</th><th>Akciós Ár</th><th>Garancia</th><th>Készleten</th></tr>";
+        echo "<table><tr><th>Kép</th><th>Megnevezés</th><th>Kategória</th><th>Ár</th><th>Akciós Ár</th><th>Garancia</th><th>Készleten</th></tr>";
         while ($row = $termekek->fetch_assoc()) {
-
-            echo "<tr><td>" . $row["megnevezes"] . "</td><td>" . $row["kategoria"] . "</td><td> " . $row["ar"] . "</td><td>" . $row["akcios_ar"] . "</td><td>" . $row["garancia"] . "</td><td>" . $row["keszlet"] . "</td></tr>";
+            $termekkep = $db->query("select * from termekkepek where termek_id=".$row['id'])->fetch_assoc();
+            
+            if (isset($termekkep['kepfajl'])) {
+                echo '<tr><td><img class="termekkep" src="termekkepek/'.$row['id'].'/' .$termekkep['kepfajl'].'"></td>';
+            } else {
+                echo '<tr><td><img class="termekkep" src="termekkepek/1/ures.png"></td>';
+                //echo '<tr><td></td>';
+            }
+            echo '<td>'. $row["megnevezes"] . "</td><td>" . $row["kategoria"] . "</td><td> " . $row["ar"] . "</td><td>" . $row["akcios_ar"] . "</td><td>" . $row["garancia"] . "</td><td>" . $row["keszlet"] . "</td></tr>";
         }
         echo "</table>";
     } else {

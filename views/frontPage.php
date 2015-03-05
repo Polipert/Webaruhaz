@@ -1,5 +1,5 @@
 <?php include('includes/header.php'); ?>
-
+<br>
 <div id="content">
   <h2>Kezdőlap</h2>
   <?php

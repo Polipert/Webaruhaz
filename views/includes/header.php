@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wábesbót - <?php echo $pageTitle; ?></title>
-    
-    <!-- jQuery: -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
-    <!-- Bootstrap: -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Wábesbót - <?php echo $pageTitle; ?></title>
 
-    <link rel="stylesheet" type="text/css" href="views/css/base.css">
+        <!-- jQuery: -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-  </head>
-  <body>
+        <!-- Bootstrap: -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-    <div id="header">
-      <h1 id="sitename">Wábesbót</h1>
-      <?php include('navigation.php'); ?>
-    </div>
+        <link rel="stylesheet" type="text/css" href="views/css/base.css">
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div id="header" class="row">
+                <div class="col-md-3">
+
+                    <h1 id="sitename">Wábesbót</h1> 
+                </div>
+                <div class="col-md-8 navigation">
+                    <?php include('navigation.php'); ?>   
+                </div>
+            </div>
