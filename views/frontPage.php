@@ -1,20 +1,18 @@
 <?php include('includes/header.php'); ?>
 <br>
 <div id="content">
-  <h2>Kezdőlap</h2>
-  <?php
-  
-	foreach ($news as $item) {
-		$tagID = $item['tag'];
-		echo '<div class="news">';
-		echo '<div class="tag">'.$tags[$tagID].'</div>';
-		echo '<div class="title">'.$item['title'].'</div>';
-		echo '<div class="text">'.$item['text'].'</div>';
-		echo '<div class="date">'.$item['date'].'</div>';
-		echo '</div>';
-	}
-	
-  ?>
+    <h2>Kezdőlap</h2>
+    
+<?php
+foreach ($news as $item) {
+    $tagID = $item['tag'];
+    echo '<div class="news">';
+    echo '<div class="tag">' . $tags[$tagID] . '</div>';
+    echo '<div class="title">' . $item['title'] . '</div>';
+    echo '<div class="text">' . $item['text'] . '</div>';
+    echo '<div class="date">' . $item['date'] . '</div>';
+    echo '</div>';
+}
+?>
 </div>
-
 <?php include('includes/footer.php'); ?>

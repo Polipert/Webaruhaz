@@ -23,10 +23,15 @@
         <div class="container-fluid">
             <div id="header" class="row">
                 <div class="col-md-3">
-
-                    <h1 id="sitename">Wábesbót</h1> 
+                    <div id="sitename">
+                        <img src="termekkepek/logo.png">
+                    </div>
                 </div>
-                <div class="col-md-8 navigation">
+                <div class="col-md-9 navigation"> 
                     <?php include('navigation.php'); ?>   
                 </div>
-            </div>
+                
+                    </div>
+
+                </div>
+            

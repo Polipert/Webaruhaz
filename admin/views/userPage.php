@@ -57,5 +57,51 @@
     <?php endif; ?>
     
 </div>
-
+  <div id="content">
+    <h2>Keresés a felhasználókban</h2>
+  
+	<?php if (isset($_SESSION['sresult'])) : ?>
+	
+		<?php 
+			if (!empty($_SESSION['sresult'])) {
+				foreach ($_SESSION['sresult'] as $item) {
+					$tagID = $item['tag'];
+					echo '<div class="news">';
+					echo '<div class="tag">'.$tags[$tagID].'</div>';
+					echo '<div class="name">'.$item['name'].'</div>';
+					echo '<div class="uname">'.$item['uname'].'</div>';
+					echo '<div class="email">'.$item['email'].'</div>';
+					echo '</div>';
+				}
+			} else {
+				echo '<p>Nincs találat.</p>';
+			}
+			unset($_SESSION['sresult']); 
+		?>
+		<br>
+		<ul id="navigation" class="nav nav-pills">
+		<li role="presentation"><a href="?q=felhasznalok">Új keresés</a></li>
+		</ul>
+	
+	<?php else : ?>
+  
+		<form name="searchForm" method="post" id="searchForm">
+				</select>
+				<br>
+				<label>név:</label>
+				<br>
+				<input type="text" name="title" class="shortText">
+				<br>
+				<label>felhasználónév:</label>
+				<br>
+				<input type="text" name="text" class="shortText">
+				<br>
+				<label>email:</label>
+                                <br>
+				<input type="submit" name="searchSubmit" value="Keresés">
+			</form>
+    
+	<?php endif; ?>
+ 
+  </div>
 <?php include ('includes/footer.php');?>

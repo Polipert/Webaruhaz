@@ -69,3 +69,34 @@ body {
   width: 450px;
   height: 200px;
 }
+
+.tid {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.ttag {
+  width: 100px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.ttitle {
+  width: 500px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.tname {
+  width: 80px;
+  height: 30px;
+  vertical-align: middle;
+  
+}
+.tuname {
+  width: 80px;
+  height: 30px;
+  vertical-align: middle;
+  
+}
