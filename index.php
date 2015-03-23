@@ -27,6 +27,16 @@ switch ($page) {
     include('controllers/termekPage.php');
     include('views/termekPage.php');
     break;
+case 'kosar':
+    $pageTitle = "kosar";
+    include('controllers/kosar.php');
+    include('views/kosar.php');
+    break;
+case 'termek':
+    $pageTitle = "termek";
+    include('controllers/egytermekPage.php');
+    include('views/egytermekPage.php');
+    break;
   case 'kapcsolat':
     include('controllers/contactPage.php');
     include('views/contactPage.php');
