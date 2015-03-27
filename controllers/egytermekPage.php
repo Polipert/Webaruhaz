@@ -10,6 +10,7 @@ if (isset($_POST['kosarba'])) {
     }
     if (!isset($_SESSION['kosar'])) $_SESSION['kosar'] = array();
     array_push($_SESSION['kosar'], array(
+        'id' => $t['id'],
         'megnevezes' => $t['megnevezes'],
         'db' => $darab,
         'ar' => $t['ar'],
